@@ -1,0 +1,19 @@
+module "hub_network" {
+
+  source = "./modules/hub_network"
+
+  hub_name = var.hub_name
+  location = var.location
+
+  resource_group = var.resource_group
+
+  vnet_name           = var.vnet_name
+  vnet_resource_group = var.vnet_resource_group
+
+  firewall_subnet_name    = var.firewall_subnet_name
+  firewall_public_ip_name = var.firewall_public_ip_name
+  firewall_public_ip_rg   = var.firewall_public_ip_rg
+
+  dns_inbound_subnet_id  = var.dns_inbound_subnet_id
+  dns_outbound_subnet_id = var.dns_outbound_subnet_id
+}
