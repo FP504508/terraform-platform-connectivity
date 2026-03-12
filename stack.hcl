@@ -4,5 +4,5 @@ stack {
 }
 
 component "hub" {
-  source = "../../components/hub"
+  source = "./components/hub"
 }
