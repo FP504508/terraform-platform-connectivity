@@ -2,6 +2,7 @@ stack {
   name = "platform-connectivity"
 }
 
+
 deployment "test" {
 
   component "hub" {
