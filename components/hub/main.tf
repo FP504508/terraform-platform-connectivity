@@ -23,5 +23,5 @@ module "hub_network" {
 }
 
 resource "random_pet" "test" {
-  length = 3
+  length = 2
 }
