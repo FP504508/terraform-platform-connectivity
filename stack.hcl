@@ -51,3 +51,5 @@ component "hub" {
   }
 }
 }
+
+esto_es_un_error
