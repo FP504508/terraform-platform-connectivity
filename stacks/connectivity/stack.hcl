@@ -1,5 +1,5 @@
 stack {
-  name = "platform-connectivity"
+  name = "terraform-platform-connectivity"
 }
 
 locals {
