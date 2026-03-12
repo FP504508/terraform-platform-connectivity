@@ -25,3 +25,7 @@ module "hub_network" {
 resource "random_pet" "test" {
   length = 2
 }
+
+provider "azurerm" {
+  features {}
+}
