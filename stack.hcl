@@ -32,7 +32,7 @@ component "hub" {
 
   for_each = local.hubs
 
-  source = "../components/hub"
+  source = "./components/hub"
 
   inputs = {
 
