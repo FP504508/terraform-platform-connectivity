@@ -19,7 +19,7 @@ locals {
       firewall_public_ip_rg   = "rg-connectivity-networkhub-mxc"
 
       firewall_policy_name = "demo-pollicy"
-      firewall_policy_rg   = "rg-connectivity-networkhub-mxc
+      firewall_policy_rg   = "rg-connectivity-networkhub-mxc"
     }
 
 
@@ -32,11 +32,11 @@ component "hub" {
 
   for_each = local.hubs
 
-  source = "./components/hub"
+  source = "../../components/hub"
 
   inputs = {
 
-    subscription_id = "ID: 39059978-6c79-4df2-bb26-ee93afc78d8a"
+    subscription_id = "39059978-6c79-4df2-bb26-ee93afc78d8a"
 
     hub_name = each.key
     location = each.value.location
