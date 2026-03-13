@@ -11,19 +11,23 @@ variable "resource_group" {
 }
 
 variable "vnet_id" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "firewall_subnet_id" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "dns_inbound_subnet_id" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "dns_outbound_subnet_id" {
-  type = string
+  type    = string
+  default = null
 }
 
 variable "firewall_public_ip_name" {

@@ -1,10 +1,9 @@
 module "hub_network" {
 
-  source = "./modules/hub_network"
+  source = "../../modules/hub_network"
 
-  hub_name = var.hub_name
-  location = var.location
-
+  hub_name       = var.hub_name
+  location       = var.location
   resource_group = var.resource_group
 
   vnet_name           = var.vnet_name
@@ -20,12 +19,4 @@ module "hub_network" {
 
   dns_inbound_subnet_id  = var.dns_inbound_subnet_id
   dns_outbound_subnet_id = var.dns_outbound_subnet_id
-}
-
-resource "random_pet" "test" {
-  length = 2
-}
-
-provider "azurerm" {
-  features {}
 }
