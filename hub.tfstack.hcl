@@ -11,15 +11,10 @@ required_providers {
 
 provider "azurerm" "this" {
   features {}
-  subscription_id = var.subscription_id
+  subscription_id = "39059978-6c79-4df2-bb26-ee93afc78d8a"
 }
 
 provider "random" "this" {}
-
-variable "subscription_id" {
-  type      = string
-  sensitive = true
-}
 
 locals {
   hubs = {
@@ -46,8 +41,8 @@ component "hub" {
     location       = each.value.location
     resource_group = each.value.resource_group
 
-    vnet_name           = each.value.vnet_name
-    vnet_resource_group = each.value.vnet_resource_group
+    vnet_name            = each.value.vnet_name
+    vnet_resource_group  = each.value.vnet_resource_group
     firewall_subnet_name = each.value.firewall_subnet_name
 
     firewall_public_ip_name = each.value.firewall_public_ip_name
