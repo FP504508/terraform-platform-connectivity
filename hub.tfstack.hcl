@@ -16,6 +16,11 @@ provider "azurerm" "this" {
 
 provider "random" "this" {}
 
+output "stack_test" {
+  type  = string
+  value = "stack-ejecutandose"
+}
+
 component "hub_mxc" {
   source = "./components/hub"
 
