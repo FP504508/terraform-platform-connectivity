@@ -9,10 +9,28 @@ required_providers {
   }
 }
 
+variable "client_id" {
+  type      = string
+  sensitive = true
+}
+
+variable "client_secret" {
+  type      = string
+  sensitive = true
+}
+
+variable "tenant_id" {
+  type      = string
+  sensitive = true
+}
+
 provider "azurerm" "this" {
   config {
     features {}
     subscription_id = "39059978-6c79-4df2-bb26-ee93afc78d8a"
+    client_id       = var.client_id
+    client_secret   = var.client_secret
+    tenant_id       = var.tenant_id
   }
 }
 
