@@ -17,7 +17,7 @@ provider "azurerm" "this" {
 provider "random" "this" {}
 
 component "hub_mxc" {
-  source = "../../components/hub"
+  source = "./components/hub"
 
   inputs = {
     hub_name       = "mxc"
