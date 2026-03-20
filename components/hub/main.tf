@@ -17,6 +17,9 @@ module "hub_network" {
   firewall_policy_name = var.firewall_policy_name
   firewall_policy_rg   = var.firewall_policy_rg
 
-  dns_inbound_subnet_id  = var.dns_inbound_subnet_id
-  dns_outbound_subnet_id = var.dns_outbound_subnet_id
+  dns_inbound_subnet_name  = var.dns_inbound_subnet_name
+  dns_outbound_subnet_name = var.dns_outbound_subnet_name
+  dns_inbound_private_ip   = var.dns_inbound_private_ip
+
+  tags = var.tags
 }

@@ -27,4 +27,16 @@ data "azurerm_firewall_policy" "existing" {
 
 }
 
+data "azurerm_subnet" "dns_inbound" {
+  name                 = var.dns_inbound_subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_resource_group
+}
+
+data "azurerm_subnet" "dns_outbound" {
+  name                 = var.dns_outbound_subnet_name
+  virtual_network_name = var.vnet_name
+  resource_group_name  = var.vnet_resource_group
+}
+
 

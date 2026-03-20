@@ -38,12 +38,23 @@ variable "firewall_policy_rg" {
   type = string
 }
 
-variable "dns_inbound_subnet_id" {
-  type    = string
-  default = null
+variable "dns_inbound_subnet_name" {
+  type = string
 }
 
-variable "dns_outbound_subnet_id" {
-  type    = string
-  default = null
+variable "dns_outbound_subnet_name" {
+  type = string
+}
+
+variable "dns_inbound_private_ip" {
+  type = string
+}
+
+variable "tags" {
+  type    = map(string)
+  default = {
+    Application = "Laboratorio"
+    Environment = "Sandbox"
+    Owner       = "Arquitectura"
+  }
 }

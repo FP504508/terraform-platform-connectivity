@@ -2,7 +2,7 @@
 
 resource "azurerm_firewall" "hub_fw" {
 
-  name                = "afirewall-sandboxPIRF-${var.hub_name}"
+  name                = "afirewall-sandbox-${var.hub_name}"
   location            = var.location
   resource_group_name = var.resource_group
 
